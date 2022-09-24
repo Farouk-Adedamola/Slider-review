@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <section className="section">
-        <header>
+        <header className="header">
           <h1>
             <span>/</span> reviews
           </h1>
@@ -59,21 +59,21 @@ function App() {
               </article>
             );
           })}
+          <button
+            type="button"
+            className="prev"
+            onClick={() => setValue(value - 1)}
+          >
+            <FiChevronLeft className="angle" />
+          </button>
+          <button
+            className="next"
+            type="button"
+            onClick={() => setValue(value + 1)}
+          >
+            <FiChevronRight className="angle" />
+          </button>
         </div>
-        <button
-          type="button"
-          className="prev"
-          onClick={() => setValue(value - 1)}
-        >
-          <FiChevronRight />
-        </button>
-        <button
-          className="next"
-          type="button"
-          onClick={() => setValue(value + 1)}
-        >
-          <FiChevronLeft />
-        </button>
       </section>
     </>
   );
